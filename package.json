@@ -1,0 +1,15 @@
+{
+    "name": "bult",
+    "version": "0.0.0-alpha.3",
+    "description": "Publish your addons to Bult.",
+    "repository": "bultapp/publisher",
+    "preferGlobal": true,
+    "bin": {
+        "bult": "./bin/Bult.js"
+    },
+    "scripts": {
+        "clean": "rm -rf ./dist/*",
+        "compile": "tsc -p .",
+        "prepublishOnly": "npm run clean && npm run compile"
+    }
+}
