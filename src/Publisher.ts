@@ -28,14 +28,9 @@ export class Publisher {
         }
 
         let fileData: { [index: string]: any } = {};
+        let files: Array<any> = [];
 
         fileData["package.json"] = fs.readFileSync(path.resolve(directory, "package.json"));
-
-        packageJSON["bult"]["publisher"]["files"].forEach((file: any) => {
-            
-        });
-
-        let files: Array<any> = [];
 
         packageJSON["bult"]["publisher"]["files"].forEach((file: any) => {
             files.push(fs.createReadStream(path.resolve(directory, file)));
@@ -82,5 +77,6 @@ export class Publisher {
                     fs.unlinkSync(path.resolve(directory, `${packageJSON.name}-${packageJSON.version}.zip`));
                 });
             });
+    }
 
 }
