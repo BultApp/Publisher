@@ -19,7 +19,7 @@ export class Login {
 
             let options = {
                 method: "POST",
-                uri: "https://bult.test/api-auth/v1/login",
+                uri: "https://bult.app/api-auth/v1/login",
                 body: login,
                 json: true,
             };

@@ -53,7 +53,7 @@ export class Publisher {
                 console.log("Bult has compressed the files, preparing to upload.");
 
                 let options = {
-                    url: "https://bult.test/api-registry/v1/addon/publish",
+                    url: "https://bult.app/api-registry/v1/addon/publish",
                     headers: {
                         "Authorization": `Bearer ${userToken.access_token}`,
                         "Content-Type": "multipart/form-data"
